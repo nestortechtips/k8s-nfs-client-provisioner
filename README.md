@@ -1,7 +1,7 @@
 ![Nestor Tech Tips](https://storage.googleapis.com/nestortechtips.online/cover.png)
 # Provisionador dinámico de volumenes de Kubernetes con servidor NFS
 
-El motivo por el que escribo esta publicación es el final de soporte del chart de Helm que utilizaba para crear el provisionador dinámico de voluúmenes en Kubernetes. Después de una búsqueda rápida por Internet descubrí que los tutoriales/repositorios existentes no son muy claros al momento de explicar como migrar de Helm o como lo haré en este caso cómo crear los objetos necesarios para configurar el provisionador.
+El motivo por el que escribo esta publicación es el final de soporte del chart de Helm que utilizaba para crear el provisionador dinámico de volúmenes en Kubernetes. Después de una búsqueda rápida por Internet descubrí que los tutoriales/repositorios existentes no son muy claros al momento de explicar como migrar de Helm o, como lo haré en este caso, cómo crear los objetos necesarios para configurar el provisionador.
 
 # Requisitos
 * Acceso al clúster de Kubernetes con *kubectl*
@@ -144,7 +144,7 @@ En las variables de ambiente debemos de cambiar el valor de:
 * PROVISIONER_NAME - Nombre que queremos asignar al provisionador, este valor será el que se utilice en el siguiente paso
 * NFS_SERVER - Dirección IP o hostname del servidor NFS
 * NFS_PATH - Ruta de la carpeta compartida en el servidor NFS
-* image - En caso de utilizar una Raspberry cambiar la imagen por *quay.io/external_storage/nfs-client-provisioner*
+* image - En caso de utilizar una Raspberry cambiar la imagen por *quay.io/external_storage/nfs-client-provisioner-arm*
 * namespace - Nombre del namespace configurado en el paso anterior
 
 Una vez configurados los valores en el archvio creamos el Deployment con el siguiente comando:
